@@ -28,7 +28,7 @@ func main() {
 	//---------------------------------------------------------------------------------------------------------------------
 
 	flag.StringVar(&opts.network, "network", "10.69.1.0/24", "Network to scan in network/prefix notation")
-	flag.StringVar(&opts.upgradePath, "upgrade-path", "1.0.11,3.9.22,4.2.0,5.14.0,6.7.1,7.2.0,8.5.1,9.1.0,10.1.0", "Firmware upgrade path")
+	flag.StringVar(&opts.upgradePath, "upgrade-path", "1.0.11,3.9.22,4.2.0,5.14.0,6.7.1,7.2.0,8.5.1,9.1.0,10.1.0,11.1.0", "Firmware upgrade path")
 	flag.StringVar(&opts.username, "username", "", "Tasmota username")
 	flag.StringVar(&opts.password, "password", "", "Tasmota password")
 	flag.BoolVar(&opts.debug, "debug", false, "Enable debugging")
