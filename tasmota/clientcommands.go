@@ -12,6 +12,12 @@ func (c *TasmotaClient) GetDetailedStatus() (*models.StatusResponse, error) {
 	return response, err
 }
 
+func (c *TasmotaClient) GetFirmwareStatus() (*models.FirmwareStatusResponse, error) {
+	response := &models.FirmwareStatusResponse{}
+	err := c.RunCommand("status 2", &response)
+	return response, err
+}
+
 func (c *TasmotaClient) SetUpgradeURL(url string) (*models.OTAURLResponse, error) {
 	response := &models.OTAURLResponse{}
 	err := c.RunCommand(fmt.Sprintf("otaurl %s", url), &response)

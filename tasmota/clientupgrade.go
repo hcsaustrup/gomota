@@ -14,6 +14,7 @@ const (
 )
 
 func (c *TasmotaClient) Upgrader(upgradePath *helpers.UpgradePath) error {
+
 	status, err := c.GetDetailedStatus()
 	if err != nil {
 		return err

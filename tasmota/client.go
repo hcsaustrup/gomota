@@ -59,7 +59,7 @@ func (c *TasmotaClient) RunCommand(command string, response interface{}) error {
 	}
 
 	if err := json.Unmarshal(body, &response); err != nil {
-		return fmt.Errorf("failed to decode status response")
+		return fmt.Errorf("failed to decode status response: %v", err)
 	}
 
 	logrus.WithField("url", url).Debugf("Request completed")
